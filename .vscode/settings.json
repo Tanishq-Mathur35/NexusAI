@@ -1,0 +1,184 @@
+{
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "editor.fontFamily": "'JetBrains Mono', 'Cascadia Code', Consolas, monospace",
+    "editor.fontSize": 16,
+    "editor.fontWeight": "500",
+    "editor.lineHeight": 28,
+    "editor.fontLigatures": true,
+
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+
+    "editor.guides.bracketPairs": true,
+    "editor.guides.indentation": true,
+    "editor.bracketPairColorization.enabled": true,
+
+    "editor.linkedEditing": true,
+    "editor.inlineSuggest.enabled": true,
+
+    "editor.stickyScroll.enabled": true,
+    "editor.smoothScrolling": true,
+
+    "editor.renderWhitespace": "selection",
+    "editor.renderControlCharacters": false,
+
+    "editor.rulers": [100],
+
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.scrollback": 20000,
+
+    "emmet.triggerExpansionOnTab": true,
+
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true,
+
+    "prettier.singleQuote": true,
+    "prettier.semi": true,
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+
+    "workbench.colorCustomizations": {
+        "editor.background": "#1E1E2E",
+        "editor.foreground": "#CDD6F4",
+        "sideBar.background": "#11111B",
+        "sideBar.foreground": "#CDD6F4",
+        "tab.activeForeground": "#89B4FA",
+        "tab.inactiveBackground": "#181825",
+        "tab.inactiveForeground": "#6C7086",
+        "editor.selectionBackground": "#45475A",
+        "editor.lineHighlightBackground": "#2A2B3C",
+        "editorCursor.foreground": "#F9E2AF",
+        "editorLineNumber.foreground": "#6C7086",
+        "editorLineNumber.activeForeground": "#89B4FA",
+        "editorIndentGuide.background1": "#313244",
+        "editorIndentGuide.activeBackground1": "#89B4FA",
+        "editorBracketMatch.background": "#45475A",
+        "editorBracketMatch.border": "#89B4FA"
+    },
+
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword",
+                "settings": {
+                    "foreground": "#CBA6F7",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "string",
+                "settings": {
+                    "foreground": "#A6E3A1"
+                }
+            },
+            {
+                "scope": "comment",
+                "settings": {
+                    "foreground": "#6C7086",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "entity.name.function",
+                "settings": {
+                    "foreground": "#89B4FA"
+                }
+            },
+            {
+                "scope": "variable",
+                "settings": {
+                    "foreground": "#F9E2AF"
+                }
+            },
+            {
+                "scope": "constant",
+                "settings": {
+                    "foreground": "#FAB387"
+                }
+            },
+            {
+                "scope": "entity.name.type",
+                "settings": {
+                    "foreground": "#94E2D5"
+                }
+            }
+        ]
+    },
+
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "on"
+    },
+    "chat.disableAIFeatures": false
+}

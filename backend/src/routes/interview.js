@@ -1,0 +1,12 @@
+import express from 'express';
+import { startInterview, submitAnswer, completeInterview, getInterviews, getInterview, getStats } from '../controllers/interviewController.js';
+import { authenticate } from '../middleware/auth.js';
+const router = express.Router();
+router.use(authenticate);
+router.post('/start', startInterview);
+router.post('/answer', submitAnswer);
+router.post('/complete', completeInterview);
+router.get('/stats', getStats);
+router.get('/', getInterviews);
+router.get('/:id', getInterview);
+export default router;
