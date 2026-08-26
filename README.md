@@ -244,7 +244,7 @@ erDiagram
 | Realtime    | Socket.IO                            |
 | File Upload | Multer                               |
 | PDF Parsing | pdf-parse                            |
-| AI          | Mistral API (mistral-large-latest)   |
+| AI          | Gemini API (gemini-3.6-flash)        |
 | NLP         | Natural                              |
 | Security    | Helmet, express-rate-limit, bcryptjs |
 
@@ -305,7 +305,7 @@ ai-interview-simulator/
 
 - Node.js ≥ 18
 - MongoDB Atlas account (or local MongoDB)
-- Mistral API key — [console.mistral.ai](https://console.mistral.ai)
+- Gemini API key — [Google Console](https://aistudio.google.com)
 
 ### 1. Clone the repository
 
@@ -349,8 +349,8 @@ JWT_REFRESH_SECRET=<another-long-random-secret>
 JWT_EXPIRE=7d
 JWT_REFRESH_EXPIRE=30d
 
-MISTRAL_API_KEY=<your-mistral-api-key>
-MISTRAL_MODEL=mistral-large-latest
+GOOGLE_API_KEY=<your-google-api-key>
+GEMINI_MODEL=gemini-2.5-flash
 
 CLIENT_URL=http://localhost:5173
 NODE_ENV=development
@@ -470,7 +470,7 @@ Set `VITE_API_URL` and `VITE_SOCKET_URL` to your production backend URL.
 
 ### AI Pipeline
 
-Each interview flows through three Mistral calls (see [sequence diagram](#ai-interview-pipeline) above):
+Each interview flows through three Gemini calls (see [sequence diagram](#ai-interview-pipeline) above):
 
 1. **Question generation** — domain + difficulty + optional resume context → 8 JSON questions
 2. **Answer evaluation** — per question, returns score 0–100, feedback, and optional follow-up
@@ -501,15 +501,3 @@ Socket.IO handles WebRTC signaling (offer/answer/ICE candidates) and live interv
 - [ ] Mobile app (React Native)
 - [ ] GitHub Actions CI/CD pipeline
 - [ ] Stripe billing for premium tiers
-
----
-
-## Screenshots
-
-> Add screenshots of: Landing page, Dashboard, Interview Session, Report, ATS Analysis
-
----
-
-## License
-
-MIT © 2025 NexusAI. Built with Mistral AI, React, and Node.js.

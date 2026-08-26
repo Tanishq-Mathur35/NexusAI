@@ -1,42 +1,42 @@
 version: '3.9'
 services:
-  mongo:
-    image: mongo:7
-    container_name: nexusai_mongo
-    restart: unless-stopped
-    volumes: [mongo_data:/data/db]
-    ports: ["27017:27017"]
-    networks: [nexusai]
-  backend:
-    build: { context: ./backend, dockerfile: Dockerfile }
-    container_name: nexusai_backend
-    restart: unless-stopped
-    depends_on: [mongo]
-    environment:
-      PORT: 5000
-      MONGODB_URI: mongodb://mongo:27017/nexusai
-      NODE_ENV: production
-      JWT_SECRET: ${JWT_SECRET}
-      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
-      MISTRAL_API_KEY: ${MISTRAL_API_KEY}
-      CLIENT_URL: ${CLIENT_URL:-http://localhost}
-    ports: ["5000:5000"]
-    volumes: [uploads:/app/src/uploads]
-    networks: [nexusai]
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-      args:
-        VITE_API_URL: ${VITE_API_URL:-http://localhost:5000/api}
-        VITE_SOCKET_URL: ${VITE_SOCKET_URL:-http://localhost:5000}
-    container_name: nexusai_frontend
-    restart: unless-stopped
-    depends_on: [backend]
-    ports: ["80:80"]
-    networks: [nexusai]
+    mongo:
+        image: mongo:7
+        container_name: nexusai_mongo
+        restart: unless-stopped
+        volumes: [mongo_data:/data/db]
+        ports: ['27017:27017']
+        networks: [nexusai]
+    backend:
+        build: { context: ./backend, dockerfile: Dockerfile }
+        container_name: nexusai_backend
+        restart: unless-stopped
+        depends_on: [mongo]
+        environment:
+            PORT: 5000
+            MONGODB_URI: mongodb://mongo:27017/nexusai
+            NODE_ENV: production
+            JWT_SECRET: ${JWT_SECRET}
+            JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+            MISTRAL_API_KEY: ${MISTRAL_API_KEY}
+            CLIENT_URL: ${CLIENT_URL:-http://localhost}
+        ports: ['5000:5000']
+        volumes: [uploads:/app/src/uploads]
+        networks: [nexusai]
+    frontend:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+            args:
+                VITE_API_URL: ${VITE_API_URL:-http://localhost:5000/api}
+                VITE_SOCKET_URL: ${VITE_SOCKET_URL:-http://localhost:5000}
+        container_name: nexusai_frontend
+        restart: unless-stopped
+        depends_on: [backend]
+        ports: ['80:80']
+        networks: [nexusai]
 networks:
-  nexusai: { driver: bridge }
+    nexusai: { driver: bridge }
 volumes:
-  mongo_data:
-  uploads:
+    mongo_data:
+    uploads:
