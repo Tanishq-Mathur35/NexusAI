@@ -310,8 +310,8 @@ ai-interview-simulator/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Tanishq-Mathur35/ai-interview-simulator.git
-cd ai-interview-simulator
+git clone https://github.com/Tanishq-Mathur35/NexusAI.git
+cd NexusAI
 ```
 
 ### 2. Backend setup
